@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="untitled1PageDef"
+                Package="oracle.ted.ipspregled.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <page path="template.TemplatePageDef" id="ptb1" Refresh="ifNeeded"/>
+    <iterator Binds="IpsMntFolder1" RangeSize="25" DataControl="AppModuleAMDataControl" id="IpsMntFolder1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="IpsMntFolder1Iterator" id="IpsMntFolder1">
+      <nodeDefinition DefName="oracle.ted.ipspregled.uiview.IpsMntFolderVO" Name="IpsMntFolder10">
+        <AttrNames>
+          <Item Value="NameB"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

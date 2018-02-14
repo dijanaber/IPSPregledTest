@@ -1,0 +1,17 @@
+The following Synchronization Actions were performed successfully:
+
+Entity :IpsRastEO
+  Attribute :AssetId
+    Change Mandatory to:true
+  Remove Key Constraint: IpsrasteoPrimaryKey
+  Create Key for Constraint: IPS_RAST_PK
+Entity :IpsDataEO
+  Attribute :IpsId
+    Change Primary Key to:false
+  Remove Key Constraint: fk_IpsDataEO
+  Remove Key Constraint: IpsdataeoPrimaryKey
+Entity :IpsPrekEO
+  Attribute :AssetId
+    Change Mandatory to:true
+  Remove Key Constraint: IpsprekeoPrimaryKey
+  Create Key for Constraint: IPS_PREK_PK

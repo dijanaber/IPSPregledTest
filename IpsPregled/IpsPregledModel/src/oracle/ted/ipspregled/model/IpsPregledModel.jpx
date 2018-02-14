@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="IpsPregledModel"
+  Version="11.1.2.64.36"
+  SeparateXMLFiles="true"
+  PackageName="oracle.ted.ipspregled.model">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../../IpsPregledModel.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
+    <Attr Name="_NamedConnection" Value="ConnectionTed"/>
+    <Attr Name="_appModuleNames0" Value="oracle.ted.ipspregled.test.AppModuleAM"/>
+  </DesignTime>
+  <Containee
+    Name="assoc"
+    PackageName="oracle.ted.ipspregled.assoc"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="entity"
+    PackageName="oracle.ted.ipspregled.entity"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="link"
+    PackageName="oracle.ted.ipspregled.link"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="test"
+    PackageName="oracle.ted.ipspregled.test"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="uiview"
+    PackageName="oracle.ted.ipspregled.uiview"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>

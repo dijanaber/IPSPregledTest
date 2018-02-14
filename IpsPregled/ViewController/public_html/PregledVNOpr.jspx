@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="PregledVNOpr.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:pageTemplate viewId="/WEB-INF/template/1Template.jspx" id="pt1">
+                    <f:facet name="levo">
+                        <af:group id="g1">
+                            <af:panelGroupLayout id="pgl2" layout="horizontal">
+                                <af:panelBox text="Претраживач локације" id="pb3" inlineStyle="height:887px;">
+                                    <f:facet name="toolbar"/>
+                                    <af:panelCollection id="pc3" inlineStyle="height:859px;">
+                                        <f:facet name="menus"/>
+                                        <f:facet name="toolbar"/>
+                                        <f:facet name="statusbar"/>
+                                        <af:tree value="#{bindings.IpsMntFolder1.treeModel}" var="node"
+                                                 selectionListener="#{getValue.selectionListener}"
+                                                 rowSelection="single" id="t1">
+                                            <f:facet name="nodeStamp">
+                                                <af:outputText value="#{node}" id="ot1"/>
+                                            </f:facet>
+                                        </af:tree>
+                                    </af:panelCollection>
+                                </af:panelBox>
+                            </af:panelGroupLayout>
+                        </af:group>
+                    </f:facet>
+                    <f:facet name="desno">
+                        <af:panelGroupLayout id="pgl1" layout="horizontal">
+                            <af:panelBox text="Опрема" id="pb1"
+                                binding="#{getValue.pbBinding}" inlineStyle="height:885px;">
+                                <f:facet name="toolbar"/>
+                                <af:commandButton text="executeSearchVO" id="cb1"
+                                                  actionListener="#{bindings.executeSearchVo.execute}"
+                                                  disabled="#{!bindings.executeSearchVo.enabled}" rendered="false"/>
+                                <af:commandButton text="executeSearchVo" id="cb2" rendered="false"
+                                                  actionListener="#{bindings.executeSearchVo.execute}"/>
+                                <af:panelCollection id="pc1" inlineStyle="height:856px;">
+                                    <f:facet name="menus"/>
+                                    <f:facet name="toolbar"/>
+                                    <f:facet name="statusbar"/>
+                                    <af:table value="#{bindings.IpsData1.collectionModel}" var="row"
+                                              rows="#{bindings.IpsData1.rangeSize}"
+                                              emptyText="#{bindings.IpsData1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                              fetchSize="#{bindings.IpsData1.rangeSize}" rowBandingInterval="0"
+                                              filterModel="#{bindings.IpsData1Query.queryDescriptor}"
+                                              queryListener="#{bindings.IpsData1Query.processQuery}"
+                                              filterVisible="true" varStatus="vs" id="t3" width="900">
+                                        <af:column sortProperty="#{bindings.IpsData1.hints.GrupaOpreme.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.IpsData1.hints.GrupaOpreme.label}" id="c10">
+                                            <af:outputText value="#{row.GrupaOpreme}"
+                                                           shortDesc="#{bindings.IpsData1.hints.GrupaOpreme.tooltip}"
+                                                           id="ot12"/>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.IpsData1.hints.Proizvodjac.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.IpsData1.hints.Proizvodjac.label}" id="c13">
+                                            <af:outputText value="#{row.Proizvodjac}"
+                                                           shortDesc="#{bindings.IpsData1.hints.Proizvodjac.tooltip}"
+                                                           id="ot15"/>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.IpsData1.hints.GodProizvodnje.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.IpsData1.hints.GodProizvodnje.label}" id="c9">
+                                            <af:outputText value="#{row.GodProizvodnje}"
+                                                           shortDesc="#{bindings.IpsData1.hints.GodProizvodnje.tooltip}"
+                                                           id="ot11"/>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.IpsData1.hints.DatumPustanja.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.IpsData1.hints.DatumPustanja.label}" id="c1">
+                                            <f:facet name="filter">
+                                                <af:inputDate value="#{vs.filterCriteria.DatumPustanja}" id="id2">
+                                                    <af:convertDateTime pattern="#{bindings.IpsData1.hints.DatumPustanja.format}"/>
+                                                </af:inputDate>
+                                            </f:facet>
+                                            <af:outputText value="#{row.DatumPustanja}"
+                                                           shortDesc="#{bindings.IpsData1.hints.DatumPustanja.tooltip}"
+                                                           id="ot2">
+                                                <af:convertDateTime pattern="#{bindings.IpsData1.hints.DatumPustanja.format}"/>
+                                            </af:outputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.IpsData1.hints.SerijskiBr.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.IpsData1.hints.SerijskiBr.label}" id="c14">
+                                            <af:outputText value="#{row.SerijskiBr}"
+                                                           shortDesc="#{bindings.IpsData1.hints.SerijskiBr.tooltip}"
+                                                           id="ot16"/>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.IpsData1.hints.Tip.name}" filterable="true"
+                                                   sortable="true" headerText="#{bindings.IpsData1.hints.Tip.label}"
+                                                   id="c15">
+                                            <af:outputText value="#{row.Tip}"
+                                                           shortDesc="#{bindings.IpsData1.hints.Tip.tooltip}"
+                                                           id="ot17"/>
+                                        </af:column>
+                                    </af:table>
+                                </af:panelCollection>
+                            </af:panelBox>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="PrvaStranicaPageDef"
+                Package="oracle.ted.ipspregled.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="IpsMntFolder1" RangeSize="25" DataControl="AppModuleAMDataControl" id="IpsMntFolder1Iterator"/>
+    <iterator Binds="IpsData1" RangeSize="25" DataControl="AppModuleAMDataControl" id="IpsData1Iterator"/>
+    <searchRegion Binds="IpsData1Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="IpsData1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="IpsMntFolder1Iterator" id="IpsMntFolder1">
+      <nodeDefinition DefName="oracle.ted.ipspregled.uiview.IpsMntFolderVO" Name="IpsMntFolder10">
+        <AttrNames>
+          <Item Value="NameB"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="IpsMntFolder"/>
+        </Accessors>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="executeSearchVo" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="executeSearchVo"
+                  IsViewObjectMethod="false" DataControl="AppModuleAMDataControl"
+                  InstanceName="AppModuleAMDataControl.dataProvider">
+      <NamedData NDName="p_folder_id" NDType="java.lang.String"/>
+    </methodAction>
+    <tree IterBinding="IpsData1Iterator" id="IpsData1">
+      <nodeDefinition DefName="oracle.ted.ipspregled.uiview.IpsDataVO" Name="IpsData10">
+        <AttrNames>
+          <Item Value="DatumPustanja"/>
+          <Item Value="FolderId"/>
+          <Item Value="GodProizvodnje"/>
+          <Item Value="GrupaOpreme"/>
+          <Item Value="IdSOpr"/>
+          <Item Value="IpsId"/>
+          <Item Value="Proizvodjac"/>
+          <Item Value="SerijskiBr"/>
+          <Item Value="Tip"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="DrugaStranicaPageDef"
+                Package="oracle.ted.ipspregled.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="IpsData1" RangeSize="25" DataControl="AppModuleAMDataControl" id="IpsData2Iterator"/>
+    <searchRegion Binds="IpsData2Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="IpsData2Query"/>
+    <iterator Binds="IpsMntFolder1" RangeSize="25" DataControl="AppModuleAMDataControl" id="IpsMntFolder2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="IpsData2Iterator" id="IpsData2">
+      <nodeDefinition DefName="oracle.ted.ipspregled.uiview.IpsDataVO" Name="IpsData20">
+        <AttrNames>
+          <Item Value="DatumPustanja"/>
+          <Item Value="FolderId"/>
+          <Item Value="GodProizvodnje"/>
+          <Item Value="GrupaOpreme"/>
+          <Item Value="IdSOpr"/>
+          <Item Value="IpsId"/>
+          <Item Value="Proizvodjac"/>
+          <Item Value="SerijskiBr"/>
+          <Item Value="Tip"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="IpsMntFolder2Iterator" id="IpsMntFolder2">
+      <nodeDefinition DefName="oracle.ted.ipspregled.uiview.IpsMntFolderVO" Name="IpsMntFolder20"
+                      TargetIterator="${data.oracle_ted_ipspregled_view_DrugaStranicaPageDef.IpsMntFolder2Iterator}">
+        <AttrNames>
+          <Item Value="NameB"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="IpsMntFolder"/>
+        </Accessors>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

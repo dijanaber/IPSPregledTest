@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<pageTemplateDefs xmlns="http://xmlns.oracle.com/adf/faces/rich/pagetemplate">
+  <pagetemplate-jsp-ui-def>/WEB-INF/template/TempStr.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/templateDef1.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/WEB-INF/template/TempZaSve.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/WEB-INF/template/GlavniTempZaStr.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/WEB-INF/template/1Template.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/WEB-INF/template/GlavniTemp.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/WEB-INF/GlavniTemp.jspx</pagetemplate-jsp-ui-def>
+</pageTemplateDefs>

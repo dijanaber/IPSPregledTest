@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="PregledVNOpr">
+    <page>/PregledVNOpr.jspx</page>
+  </view>
+  <view id="Dobrodosli">
+    <page>/Dobrodosli.jspx</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>VNoprema</from-outcome>
+      <to-activity-id>PregledVNOpr</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__4">
+      <from-outcome>Dobrodosli</from-outcome>
+      <to-activity-id>Dobrodosli</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__3">
+    <managed-bean-name>getValue</managed-bean-name>
+    <managed-bean-class>oracle.ted.ipspregled.view.getValue</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>AuthenticationBean</managed-bean-name>
+    <managed-bean-class>oracle.ted.ipspregled.bean.AuthenticationBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name>CommonActionBean</managed-bean-name>
+    <managed-bean-class>oracle.ted.ipspregled.common.CommonActions</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>NATSecurityBean</managed-bean-name>
+    <managed-bean-class>oracle.ted.ipspregled.bean.NATSecurityBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <display-name>1Template</display-name>
+                <facet>
+                    <facet-name>levo</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>desno</facet-name>
+                </facet>
+                <attribute>
+                    <attribute-name>attr1_levo</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>attr2_desno</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+            </component>
+        </af:xmlContent>
+        <af:panelStretchLayout topHeight="119px" id="pt_psl1">
+            <f:facet name="top">
+                <af:image source="#{resource['images:power-cables.jpg']}" id="pt_i1"/>
+            </f:facet>
+            <f:facet name="center">
+                <!-- id="af_twocol_left_full_header_splitandscrolled"   -->
+                <af:panelSplitter orientation="horizontal" splitterPosition="231" id="pt_ps1">
+                    <f:facet name="first">
+                        <af:facetRef facetName="levo"/>
+                    </f:facet>
+                    <f:facet name="second">
+                        <af:facetRef facetName="desno"/>
+                    </f:facet>
+                </af:panelSplitter>
+            </f:facet>
+        </af:panelStretchLayout>
+    </af:pageTemplateDef>
+</jsp:root>

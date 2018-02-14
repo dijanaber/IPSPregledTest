@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="IpsUserVO"
+  Version="11.1.2.64.36"
+  SelectList="IpsUserEO.ROWID, 
+       IpsUserEO.USERNAME"
+  FromList="TED.IPS_USER IpsUserEO"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="oracle.ted.ipspregled.uiview.IpsUserVO_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <EntityUsage
+    Name="IpsUserEO"
+    Entity="oracle.ted.ipspregled.entity.IpsUserEO"/>
+  <ViewAttribute
+    Name="RowID"
+    IsUpdateable="false"
+    PrecisionRule="true"
+    EntityAttrName="RowID"
+    EntityUsage="IpsUserEO"
+    AliasName="ROWID"/>
+  <ViewAttribute
+    Name="Username"
+    PrecisionRule="true"
+    EntityAttrName="Username"
+    EntityUsage="IpsUserEO"
+    AliasName="USERNAME"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.ted.ipspregled.model.IpsPregledModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="IpsMntFoldertEO"
+  Version="11.1.2.64.36"
+  DBObjectType="TABLE"
+  DBObjectName="TED.IPS_MNTFOLDER"
+  AliasName="IpsMntFoldertEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <Attribute
+    Name="FolderId"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="FOLDER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TED.IPS_MNTFOLDER"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ParentfolderId"
+    Precision="50"
+    ColumnName="PARENTFOLDER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TED.IPS_MNTFOLDER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LocationtypeId"
+    Precision="50"
+    ColumnName="LOCATIONTYPE_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TED.IPS_MNTFOLDER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NameB"
+    Precision="50"
+    ColumnName="NAME_B"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TED.IPS_MNTFOLDER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Deleted"
+    ColumnName="DELETED"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="TED.IPS_MNTFOLDER"/>
+  <AccessorAttribute
+    Name="IpsMntFoldert"
+    Association="oracle.ted.ipspregled.assoc.IpsMntfolderFkAssoc"
+    AssociationEnd="oracle.ted.ipspregled.assoc.IpsMntfolderFkAssoc.IpsMntFoldert"
+    AssociationOtherEnd="oracle.ted.ipspregled.assoc.IpsMntfolderFkAssoc.ParentfolderIdIpsMntFoldert"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ParentfolderIdIpsMntFoldert"
+    Association="oracle.ted.ipspregled.assoc.IpsMntfolderFkAssoc"
+    AssociationEnd="oracle.ted.ipspregled.assoc.IpsMntfolderFkAssoc.ParentfolderIdIpsMntFoldert"
+    AssociationOtherEnd="oracle.ted.ipspregled.assoc.IpsMntfolderFkAssoc.IpsMntFoldert"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="IpsMntLocationt"
+    Association="oracle.ted.ipspregled.assoc.IpsMntfolderFk2Assoc"
+    AssociationEnd="oracle.ted.ipspregled.assoc.IpsMntfolderFk2Assoc.IpsMntLocationt"
+    AssociationOtherEnd="oracle.ted.ipspregled.assoc.IpsMntfolderFk2Assoc.IpsMntFoldert"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="IpsData"
+    Association="oracle.ted.ipspregled.assoc.IpsDataFolderAssoc"
+    AssociationEnd="oracle.ted.ipspregled.assoc.IpsDataFolderAssoc.IpsData"
+    AssociationOtherEnd="oracle.ted.ipspregled.assoc.IpsDataFolderAssoc.IpsMntFoldert"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="IpsRast"
+    Association="oracle.ted.ipspregled.entity.IpsRastFk1Assoc"
+    AssociationEnd="oracle.ted.ipspregled.entity.IpsRastFk1Assoc.IpsRast"
+    AssociationOtherEnd="oracle.ted.ipspregled.entity.IpsRastFk1Assoc.IpsMntFoldert"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="IpsPrek"
+    Association="oracle.ted.ipspregled.entity.IpsPrekFkAssoc"
+    AssociationEnd="oracle.ted.ipspregled.entity.IpsPrekFkAssoc.IpsPrek"
+    AssociationOtherEnd="oracle.ted.ipspregled.entity.IpsPrekFkAssoc.IpsMntFoldert"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="IpsMntfolderPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="IPS_MNTFOLDER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ted.ipspregled.entity.IpsMntFoldertEO.FolderId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="IpsMntfolderFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="IPS_MNTFOLDER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="IPS_MNTFOLDER_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ted.ipspregled.entity.IpsMntFoldertEO.ParentfolderId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="IpsMntfolderFk2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="IPS_MNTLOCATIONTYPE_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="IPS_MNTFOLDER_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ted.ipspregled.entity.IpsMntFoldertEO.LocationtypeId"/>
+    </AttrArray>
+  </Key>
+</Entity>

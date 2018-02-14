@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36"
+                id="adfc_config___ExecuteWithParamsPageDef" Package="oracle.ted.ipspregled.view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="IpsMntFolder1" RangeSize="25" DataControl="AppModuleAMDataControl" id="IpsMntFolder1Iterator"
+              Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="IpsMntFolder1Iterator" id="ExecuteWithParams" RequiresUpdateModel="true"
+            Action="executeWithParams">
+      <NamedData NDName="p1" NDValue="#{pageFlowScope.p1}" NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>

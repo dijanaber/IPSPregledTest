@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModuleAM"
+  Version="11.1.2.64.36"
+  ClearCacheOnRollback="true"
+  ComponentClass="oracle.ted.ipspregled.test.AppModuleAMImpl"
+  ComponentInterface="oracle.ted.ipspregled.test.common.AppModuleAM"
+  ClientProxyName="oracle.ted.ipspregled.test.client.AppModuleAMClient">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="IpsMntFolder1"
+    ViewObjectName="oracle.ted.ipspregled.uiview.IpsMntFolderVO">
+    <ViewCriteriaUsage
+      Name="IpsMntFolderVOCriteria"
+      FullName="oracle.ted.ipspregled.uiview.IpsMntFolderVO.IpsMntFolderVOCriteria"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="IpsData1"
+    ViewObjectName="oracle.ted.ipspregled.uiview.IpsDataVO">
+    <ViewCriteriaUsage
+      Name="IpsDataVOCriteria"
+      FullName="oracle.ted.ipspregled.uiview.IpsDataVO.IpsDataVOCriteria"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="IpsMntFolder2"
+    ViewObjectName="oracle.ted.ipspregled.uiview.IpsMntFolderVO">
+    <ViewCriteriaUsage
+      Name="IpsMntFolderVOCriteria"
+      FullName="oracle.ted.ipspregled.uiview.IpsMntFolderVO.IpsMntFolderVOCriteria"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="IpsData2"
+    ViewObjectName="oracle.ted.ipspregled.uiview.IpsDataVO">
+    <ViewCriteriaUsage
+      Name="IpsDataVOCriteria"
+      FullName="oracle.ted.ipspregled.uiview.IpsDataVO.IpsDataVOCriteria"/>
+  </ViewUsage>
+  <ViewLinkUsage
+    Name="IpsMntFolderFkLink1"
+    ViewLinkObjectName="oracle.ted.ipspregled.link.IpsMntFolderFkLink"
+    SrcViewUsageName="oracle.ted.ipspregled.test.AppModuleAM.IpsMntFolder1"
+    DstViewUsageName="oracle.ted.ipspregled.test.AppModuleAM.IpsMntFolder2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="IpsDataFolderViewLink1"
+    ViewLinkObjectName="oracle.ted.ipspregled.link.IpsDataFolderViewLink"
+    SrcViewUsageName="oracle.ted.ipspregled.test.AppModuleAM.IpsMntFolder1"
+    DstViewUsageName="oracle.ted.ipspregled.test.AppModuleAM.IpsData2"
+    Reversed="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.ted.ipspregled.model.IpsPregledModelBundle"/>
+  </ResourceBundle>
+  <ClientInterface>
+    <Method
+      Name="executeSearchVo"
+      MethodName="executeSearchVo">
+      <Return
+        Type="void"/>
+      <Parameter
+        Name="p_folder_id"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

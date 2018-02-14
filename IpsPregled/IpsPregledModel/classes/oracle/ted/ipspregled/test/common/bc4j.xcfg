@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.ted.ipspregled.test.AppModuleAM">
+      <AppModuleConfig name="AppModuleAMLocal" jbo.project="oracle.ted.ipspregled.model.IpsPregledModel" ApplicationName="oracle.ted.ipspregled.test.AppModuleAM" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.ted.ipspregled.test.AppModuleAM"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/ConnectionTedDS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="AppModuleAMShared" jbo.project="oracle.ted.ipspregled.model.IpsPregledModel" ApplicationName="oracle.ted.ipspregled.test.AppModuleAM" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="oracle.ted.ipspregled.test.AppModuleAM"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/ConnectionTedDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

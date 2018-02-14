@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <display-name>TempStr</display-name>
+                <facet>
+                    <facet-name>slika</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>drvo</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>tabele</facet-name>
+                </facet>
+                <attribute>
+                    <attribute-name>slika</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value>ovde ide slika</default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>drvo</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value>ovde ide drvo</default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>tabela</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value>ovde ide tabela</default-value>
+                </attribute>
+            </component>
+        </af:xmlContent>
+        <af:panelStretchLayout topHeight="83px" startWidth="100px" id="pt_psl2">
+            <f:facet name="top">
+                <af:facetRef facetName="slika"/>
+            </f:facet>
+            <f:facet name="center">
+                <!-- id="af_twocol_left_full_header_scrolled"   -->
+                <af:panelStretchLayout startWidth="195px" id="pt_psl1">
+                    <f:facet name="center">
+                        <af:panelGroupLayout layout="scroll" id="pt_pgl1">
+                            <af:facetRef facetName="tabele"/>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="start">
+                        <af:facetRef facetName="drvo"/>
+                    </f:facet>
+                </af:panelStretchLayout>
+            </f:facet>
+        </af:panelStretchLayout>
+    </af:pageTemplateDef>
+</jsp:root>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="IpsMntLocationVO"
+  Version="11.1.2.64.36"
+  SelectList="IpsMntLocationtEO.DELETED, 
+       IpsMntLocationtEO.LOCATIONTYPE_ID, 
+       IpsMntLocationtEO.NAME_B"
+  FromList="TED.IPS_MNTLOCATIONTYPE IpsMntLocationtEO"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="oracle.ted.ipspregled.uiview.IpsMntLocationVO_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <EntityUsage
+    Name="IpsMntLocationtEO"
+    Entity="oracle.ted.ipspregled.entity.IpsMntLocationtEO"/>
+  <ViewAttribute
+    Name="Deleted"
+    PrecisionRule="true"
+    EntityAttrName="Deleted"
+    EntityUsage="IpsMntLocationtEO"
+    AliasName="DELETED"/>
+  <ViewAttribute
+    Name="LocationtypeId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="LocationtypeId"
+    EntityUsage="IpsMntLocationtEO"
+    AliasName="LOCATIONTYPE_ID"/>
+  <ViewAttribute
+    Name="NameB"
+    PrecisionRule="true"
+    EntityAttrName="NameB"
+    EntityUsage="IpsMntLocationtEO"
+    AliasName="NAME_B"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.ted.ipspregled.model.IpsPregledModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

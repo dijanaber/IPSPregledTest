@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.ted.ipspregled.test.AppModuleAM">
+      <AppModuleConfig name="1614657527A" DBconnection="java:comp/env/jdbc/ConnectionTedDS" ApplicationName="oracle.ted.ipspregled.test.AppModuleAM" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" JDBCName="ConnectionTed" BC4JConfigName="AppModuleAMLocal" jbo.project="oracle.ted.ipspregled.model.IpsPregledModel">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="oracle.ted.ipspregled.test.AppModuleAM"/>
+         <Tester FullProxyInterfaceName="oracle.ted.ipspregled.test.common.AppModuleAM"/>
+         <Custom LastUsedConfiguration="AppModuleAMLocal" JDBCDataSource="java:comp/env/jdbc/ConnectionTedDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

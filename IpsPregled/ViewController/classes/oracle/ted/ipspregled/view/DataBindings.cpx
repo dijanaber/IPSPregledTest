@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.64.36" id="DataBindings"
+             SeparateXMLFiles="false" Package="oracle.ted.ipspregled.view" ClientType="Generic">
+  <pageMap>
+    <page path="/PrvaStr.jspx" usageId="oracle_ted_ipspregled_view_PrvaStrPageDef"/>
+    <page path="/WEB-INF/template/1Template.jspx" usageId="oracle_ted_ipspregled_view_TemplatePageDef"/>
+    <page path="/untitled1.jspx" usageId="oracle_ted_ipspregled_view_untitled1PageDef"/>
+    <page path="/PregledVNOpr.jspx" usageId="oracle_ted_ipspregled_view_PrvaStranicaPageDef"/>
+    <page path="/DrugaStranica.jspx" usageId="oracle_ted_ipspregled_view_DrugaStranicaPageDef"/>
+    <page path="/Dobrodosli.jspx" usageId="oracle_ted_ipspregled_view_DobrodosliPageDef"/>
+    <page path="/OpremaVN.jspx" usageId="oracle_ted_ipspregled_view_OpremaVNPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_ted_ipspregled_view_PrvaStrPageDef" path="oracle.ted.ipspregled.view.pageDefs.PrvaStrPageDef"/>
+    <page id="oracle_ted_ipspregled_view_TemplatePageDef" path="template.TemplatePageDef"/>
+    <page id="oracle_ted_ipspregled_view_untitled1PageDef" path="oracle.ted.ipspregled.view.pageDefs.untitled1PageDef"/>
+    <page id="oracle_ted_ipspregled_view_PrvaStranicaPageDef"
+          path="oracle.ted.ipspregled.view.pageDefs.PrvaStranicaPageDef"/>
+    <page id="oracle_ted_ipspregled_view_DrugaStranicaPageDef"
+          path="oracle.ted.ipspregled.view.pageDefs.DrugaStranicaPageDef"/>
+    <page id="oracle_ted_ipspregled_view_DobrodosliPageDef"
+          path="oracle.ted.ipspregled.view.pageDefs.DobrodosliPageDef"/>
+    <page id="oracle_ted_ipspregled_view_OpremaVNPageDef" path="oracle.ted.ipspregled.view.pageDefs.OpremaVNPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleAMDataControl" Package="oracle.ted.ipspregled.test"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl" Package="model.view"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

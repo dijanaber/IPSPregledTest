@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <display-name>TempZaSve</display-name>
+                <facet>
+                    <facet-name>levo</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>desno</facet-name>
+                </facet>
+                <attribute>
+                    <attribute-name>attr1</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+                <attribute>
+                    <attribute-name>attr2</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                </attribute>
+            </component>
+        </af:xmlContent>
+        <af:panelStretchLayout topHeight="103px" startWidth="100px" id="pt_psl1">
+            <f:facet name="top">
+                <h:graphicImage library="images/" name="power-cables.jpg" id="pt_gi1"/>
+            </f:facet>
+            <f:facet name="center">
+                <!-- id="af_twocol_left_full_header_Stretched"   -->
+                <af:panelStretchLayout startWidth="196px" id="pt_psl2">
+                    <f:facet name="center"/>
+                    <f:facet name="start"/>
+                </af:panelStretchLayout>
+            </f:facet>
+        </af:panelStretchLayout>
+    </af:pageTemplateDef>
+</jsp:root>

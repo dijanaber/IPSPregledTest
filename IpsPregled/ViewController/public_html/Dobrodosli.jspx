@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Dobrodosli.jspx" id="d1">
+            <af:form id="f1">
+                <af:pageTemplate viewId="/WEB-INF/template/1Template.jspx" id="pt1">
+                    <f:facet name="levo"/>
+                    <f:facet name="desno">
+                        <af:panelSplitter id="ps1">
+                            <f:facet name="first">
+                                <af:panelHeader text="Добродошли! " id="ph1">
+                                    <af:panelGroupLayout id="pgl1">
+                                        <af:separator id="s1"/>
+                                        <af:panelFormLayout id="pfl1">
+                                            <f:facet name="footer"/>
+                                            <af:commandLink text="Преглед ВН Опреме" id="cl1" action="VNoprema"
+                                                            inlineStyle="color:Blue; font-style:italic; font-weight:bold;">
+                                                <af:spacer width="10" height="10" id="s2"/>
+                                            </af:commandLink>
+                                        </af:panelFormLayout>
+                                    </af:panelGroupLayout>
+                                </af:panelHeader>
+                            </f:facet>
+                            <f:facet name="second"/>
+                        </af:panelSplitter>
+                    </f:facet>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
